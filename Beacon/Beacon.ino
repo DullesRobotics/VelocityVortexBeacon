@@ -33,7 +33,7 @@ void loop() {
   // put your main code here, to run repeatedly:
   int rightState = digitalRead(rightButton);
   int leftState = digitalRead(leftButton);
-  if (rightState == HIGH) {
+  /*if (rightState == HIGH) {
     rightState = LOW;
   } else {
     rightState = HIGH;
@@ -42,7 +42,9 @@ void loop() {
     leftState = LOW;
   } else {
     leftState = HIGH;
-  }
+  }*/
+  rightState = !rightState;
+  leftState = !leftState;
   if (curState == randomizeBeacon) {
     Serial.println("Randomizing Beacon");
     digitalWrite(leftR, HIGH);
